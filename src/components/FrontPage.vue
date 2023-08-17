@@ -31,19 +31,19 @@
 <body>
 
 
-  <div class="overlay" data-overlay></div>
+  <div :class="{ 'active': isOverlayActive }" @click="closeMobileMenus" class="overlay" data-overlay></div>
 
   <!--
     - MODAL
   -->
 
-  <div class="modal" data-modal>
+  <div class="modal" :class="{ 'closed': isModalClosed }"  data-modal>
 
     <div class="modal-close-overlay" data-modal-overlay></div>
 
     <div class="modal-content">
 
-      <button class="modal-close-btn" data-modal-close>
+      <button @click="closeModal" class="modal-close-btn" data-modal-close>
         <ion-icon name="close-outline"></ion-icon>
       </button>
 
@@ -85,9 +85,9 @@
     - NOTIFICATION TOAST
   -->
 
-  <div class="notification-toast" data-toast>
+  <div :class="{ 'closed': isToastClosed }" class="notification-toast" data-toast>
 
-    <button class="toast-close-btn" data-toast-close>
+    <button  @click="closeToast" class="toast-close-btn" data-toast-close>
       <ion-icon name="close-outline"></ion-icon>
     </button>
 
@@ -3597,7 +3597,7 @@
 export default {
   data() {
     return {
-      isModalClosed: true,
+      isModalClosed: false,
       isToastClosed: true,
       mobileMenus: Array.from({ length: 3 }, () => ({ isActive: false })),
       isOverlayActive: false,
