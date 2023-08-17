@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import FrontPage from './components/FrontPage.vue' // Update the import
 
-createApp(App).mount('#app')
+const app = createApp(FrontPage) // Update the component name
+app.mount('#app')
