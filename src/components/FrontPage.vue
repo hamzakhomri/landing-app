@@ -499,7 +499,7 @@
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-      <button class="action-btn" @click="openMobileMenu(0)">open
+      <button class="action-btn" @click="openMobileMenu(0)">
       <ion-icon name="bag-handle-outline"></ion-icon>
       <span class="count">0</span>
     </button>
