@@ -560,6 +560,15 @@
   justify-content: space-between;
   align-items: center;
   }
+  .accordion-button {
+    width: 100%;
+  }
+  
+  .accordion-menu-navig {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   
   .mobile-menu-category-list .menu-category { border-bottom: 1px solid var(--cultured); }
   
@@ -583,7 +592,7 @@
   .accordion-menu .add-icon,
   .accordion-menu.active .remove-icon { display: block; }
   
-  .menu-category .submenu-category-list { margin-left: 10px; }
+
   
   .submenu-title {
   padding: 6px 0;
@@ -593,6 +602,8 @@
   }
   
   .submenu-title:hover { color: var(--davys-gray); }
+  
+  .menu-category .submenu-category-list { margin-left: 10px; }
   
   .submenu-category-list {
   max-height: 0;
