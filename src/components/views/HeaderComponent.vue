@@ -519,7 +519,7 @@ export default {
 
             accordionItems: [
                     {
-                    title: "Men's",
+                    title: "Men'ss",
                     isActive: false,
                     submenus: [
                         { title: 'Shirt' },
@@ -550,6 +550,21 @@ export default {
     openMobileMenu(index) {
       this.mobileMenus[index].isActive = true;
       this.isOverlayActive = true;
+    },
+
+
+
+    closeMobileMenus() {
+      this.mobileMenus.forEach(menu => (menu.isActive = false));
+      this.isOverlayActive = false;
+    },
+    toggleAccordion(index) {
+      this.accordionItems.forEach((item, i) => {
+        if (i !== index) {
+          item.isActive = false;
+        }
+      });
+      this.accordionItems[index].isActive = !this.accordionItems[index].isActive;
     },
   },
     
