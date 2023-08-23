@@ -131,248 +131,26 @@
 
     <!--- BANNER-->
 
-  
     <BannerComponent />
+    <!--- CATEGORY-->
 
+   <BannerCategoryComponent />
 
 
 
 
-    <!--
-      - CATEGORY
-    -->
 
-    <div class="category">
-
-      <div class="container">
-
-        <div class="category-item-container has-scrollbar">
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/dress.svg" alt="dress & frock" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">Dress & frock</h3>
-
-                <p class="category-item-amount">(53)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/coat.svg" alt="winter wear" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">Winter wear</h3>
-
-                <p class="category-item-amount">(58)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/glasses.svg" alt="glasses & lens" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">Glasses & lens</h3>
-
-                <p class="category-item-amount">(68)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/shorts.svg" alt="shorts & jeans" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">Shorts & jeans</h3>
-
-                <p class="category-item-amount">(84)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/tee.svg" alt="t-shirts" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">T-shirts</h3>
-
-                <p class="category-item-amount">(35)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/jacket.svg" alt="jacket" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">Jacket</h3>
-
-                <p class="category-item-amount">(16)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/watch.svg" alt="watch" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">Watch</h3>
-
-                <p class="category-item-amount">(27)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-          <div class="category-item">
-
-            <div class="category-img-box">
-              <img src="./assets/images/icons/hat.svg" alt="hat & caps" width="30">
-            </div>
-
-            <div class="category-content-box">
-
-              <div class="category-content-flex">
-                <h3 class="category-item-title">Hat & caps</h3>
-
-                <p class="category-item-amount">(39)</p>
-              </div>
-
-              <a href="#" class="category-btn">Show all</a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-
-
-    <!--
-      - PRODUCT
-    -->
+    <!--- PRODUCT -->
 
     <div class="product-container">
 
       <div class="container">
 
 
-        <!--
-          - SIDEBAR
-        -->
-
+        <!-- - SIDEBAR -->
         <div class="sidebar  has-scrollbar" data-mobile-menu>
-          <div class="sidebar-category">
-
-            <div class="sidebar-top">
-              <h2 class="sidebar-title">Category</h2>
-
-              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-            
-           
-  <ul class="sidebar-menu-category-list">
-    <li class="sidebar-menu-category" v-for="(category, index) in categories" :key="index">
-      <button class="sidebar-accordion-menu" @click="toggleAccordionCat(index)">
-        <div class="menu-title-flex">
-          <img :src="category.icon" :alt="category.name" class="menu-title-img" width="20" height="20">
-          <p class="menu-title">{{ category.name }}</p>
-        </div>
-        <div>
-          <ion-icon name="add-outline" v-if="!category.open" class="add-icon"></ion-icon>
-          <ion-icon name="remove-outline" v-if="category.open" class="remove-icon"></ion-icon>
-        </div>
-      </button>
-      <ul v-if="category.open" data-accordion>
-        <li v-for="product in category.products" :key="product.name">
-          <a href="#" class="sidebar-submenu-title">
-            <p class="product-name">{{ product.name }}</p>
-            <data :value="product.stock" class="stock" title="Available Stock">{{ product.stock }}</data>
-          </a>
-        </li>
-      </ul>
-
-      <ul v-else>
-        <p></p>
-      </ul>
-
-    </li>
-  </ul>
-         
-
-          </div> 
+     
+          <SidebarCategory />
 
           <div class="product-showcase">
 
@@ -511,9 +289,7 @@
 
         <div class="product-box">
 
-          <!--
-            - PRODUCT MINIMAL
-          -->
+          <!--- PRODUCT MINIMAL -->
 
           <div class="product-minimal">
 
@@ -2565,13 +2341,17 @@
 import { IonIcon } from '@ionic/vue';
 import './assets/style/style.css'
 
+import HeaderComponent from './views/HeaderComponent.vue'; 
 import BannerComponent from './views/BannerComponent.vue'
-import HeaderComponent from './views/HeaderComponent.vue'; // Update the path
+import BannerCategoryComponent from './views/BannerCategoryComponent.vue'
+import SidebarCategory from './views/SidebarCategory.vue';
 
 export default {
   components: {
     HeaderComponent,
     BannerComponent,
+    BannerCategoryComponent,
+    SidebarCategory,
   },
 
   created () {
@@ -2581,72 +2361,7 @@ export default {
   
   data() {
     return {
-      categories: [
-        {
-          name: 'Footwear',
-          icon: 'assets/images/icons/shoes.svg',
-          open: false,
-          products: [
-            { name: 'Sports', stock: 45 },
-            { name: 'Formal', stock: 75 },
-            { name: 'Casual', stock: 35 },
-            { name: 'Safety Shoes', stock: 26 }
-          ]
-        },
-        {
-          name: 'Jewelry',
-          icon: './assets/images/icons/jewelry.svg',
-          open: false,
-          products: [
-            { name: 'Earrings', stock: 46 },
-            { name: 'Couple Rings', stock: 73 },
-            { name: 'Necklace', stock: 61 }
-          ]
-        },
-        {
-          name: 'Perfume',
-          icon: './assets/images/icons/perfume.svg',
-          open: false,
-          products: [
-            { name: 'Clothes Perfume', stock: 12 },
-            { name: 'Deodorant', stock: 60 },
-            { name: 'jacket', stock: 50 },
-            { name: 'dress & frock', stock: 87 }
-          ]
-        },
-        {
-          name: 'Cosmetics',
-          icon: './assets/images/icons/cosmetics.svg',
-          open: false,
-          products: [
-            { name: 'Shampoo', stock: 68 },
-            { name: 'Sunscreen', stock: 46 },
-            { name: 'Body Wash', stock: 79 },
-            { name: 'Makeup Kit', stock: 23 }
-          ]
-        },
-        {
-          name: 'Glasses',
-          icon: './assets/images/icons/glasses.svg',
-          open: false,
-          products: [
-            { name: 'Sunglasses', stock: 50 },
-            { name: 'Lenses', stock: 48 }
-          ]
-        },
-        {
-          name: 'Bags',
-          icon: './assets/images/icons/bag.svg',
-          open: false,
-          products: [
-            { name: 'Shopping Bag', stock: 62 },
-            { name: 'Gym Backpack', stock: 35 },
-            { name: 'Purse', stock: 80 },
-            { name: 'Wallet', stock: 75 }
-          ]
-        }
-        // Add more categories and products here
-      ],
+    
 
       isModalClosed: false,
       isToastClosed: true,
@@ -2693,9 +2408,7 @@ export default {
     },
 
 
-    toggleAccordionCat(index) {
-      this.categories[index].open = !this.categories[index].open;
-    }
+  
   },
 
 };
