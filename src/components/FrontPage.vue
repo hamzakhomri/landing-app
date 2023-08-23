@@ -49,19 +49,8 @@
     - HEADER
   -->
 
-  <header>
       <HeaderComponent /> <!-- Use the updated component name here -->
-    </header>
-
-
-
-
-
-
-  <!--
-    - MAIN
-  -->
-
+    
   <main>
     <BannerComponent />
     <BannerCategoryComponent />
@@ -97,19 +86,7 @@
 
   </main>
 
-
-
-
-
-  <!--
-    - FOOTER
-  -->
-
  <FooterComponent />
-
-
-
-
 
   <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
@@ -120,8 +97,6 @@
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
-import { IonIcon } from '@ionic/vue';
 import './assets/style/style.css'
 
 import HeaderComponent from './views/HeaderComponent.vue'
@@ -160,18 +135,9 @@ export default {
   
   data() {
     return {
-    
-
-    
-     
       mobileMenus: Array.from({ length: 3 }, () => ({ isActive: false })),
       isOverlayActive: false,
       // accordionItems: Array.from({ length: 3 }, () => ({ isActive: false })),
-
-
-
-
-    
 
     };
   },
