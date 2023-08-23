@@ -41,14 +41,6 @@
 
  <NotificationToast />
 
-
-
-
-
-  <!--
-    - HEADER
-  -->
-
       <HeaderComponent /> <!-- Use the updated component name here -->
     
   <main>
