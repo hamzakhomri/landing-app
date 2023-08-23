@@ -33,7 +33,7 @@
 
   <div :class="{ 'active': isOverlayActive }" @click="closeMobileMenus" class="overlay" data-overlay></div>
 
-  <!--- MODAL   -->
+  <!--- ALERT TO SUBSSCRIBE   -->
 
   <OverlayComponents />
 
