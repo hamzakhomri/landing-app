@@ -35,46 +35,7 @@
 
   <!--- MODAL   -->
 
-  <!-- <div class="modal" :class="{ 'closed': isModalClosed }"  data-modal>
-
-    <div class="modal-close-overlay" data-modal-overlay></div>
-
-    <div class="modal-content">
-
-      <button @click="closeModal" class="modal-close-btn" data-modal-close>
-        <ion-icon name="close-outline"></ion-icon>
-      </button>
-
-      <div class="newsletter-img">
-        <img src="./assets/images/newsletter.png" alt="subscribe newsletter" width="400" height="400">
-      </div>
-
-      <div class="newsletter">
-
-        <form action="#">
-
-          <div class="newsletter-header">
-
-            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
-      
-
-            <p class="newsletter-desc">
-              Subscribe the <b>Anon</b> to get latest products and discount update.
-            </p>
-
-          </div>
-
-          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
-
-          <button type="submit" class="btn-newsletter">Subscribe</button>
-
-        </form>
-
-      </div>
-
-    </div>
-
-  </div> -->
+  <OverlayComponents />
 
   <!---    NOTIFICATION TOAST   -->
 
@@ -200,6 +161,7 @@ import ProductMain from "./views/ProductMain.vue"
 import ContainerComponent from './views/ContainerComponent.vue'
 import BlogComponent from './views/BlogComponent.vue'
 import FooterComponent from './views/FooterComponent.vue'
+import OverlayComponents from './views/OverlayComponents.vue'
 
 export default {
   components: {
@@ -214,19 +176,18 @@ export default {
     ContainerComponent,
     BlogComponent,
     FooterComponent,
+    OverlayComponents,
   },
 
   created () {
-    console.clear();
-    console.log(this.categories);
   },
   
   data() {
     return {
     
 
-      isModalClosed: false,
-      isToastClosed: true,
+    
+      isToastClosed: false,
       mobileMenus: Array.from({ length: 3 }, () => ({ isActive: false })),
       isOverlayActive: false,
       // accordionItems: Array.from({ length: 3 }, () => ({ isActive: false })),
@@ -242,9 +203,7 @@ export default {
     test(){
       alert("hi");
     },
-    closeModal() {
-      this.isModalClosed = true;
-    },
+
     closeToast() {
       this.isToastClosed = true;
     },
