@@ -1,5 +1,4 @@
 <template>
-
     
     <div class="header-top">
 
@@ -369,6 +368,7 @@
         </ul>
       </div>
     </nav>
+
     <template v-for="(menu, index) in mobileMenus" :key="index">
 
       <div  class="mobile-bottom-navigation">
@@ -507,7 +507,8 @@
 
       </nav>
     </template>
-    </template>
+
+</template>
 
 <script>
 import '../assets/style/style.css'
