@@ -39,33 +39,7 @@
 
   <!---    NOTIFICATION TOAST   -->
 
-  <div :class="{ 'closed': isToastClosed }" class="notification-toast" data-toast>
-
-    <button  @click="closeToast" class="toast-close-btn" data-toast-close>
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
-
-    <div class="toast-banner">
-      <img src="./assets/images/products/jewellery-1.jpg" alt="Rose Gold Earrings" width="80" height="70">
-    </div>
-
-    <div class="toast-detail">
-
-      <p class="toast-message">
-        Someone in new just bought
-      </p>
-
-      <p class="toast-title">
-        Rose Gold Earrings
-      </p>
-
-      <p class="toast-meta">
-        <time datetime="PT2M">2 Minutes</time> ago
-      </p>
-
-    </div>
-
-  </div>
+ <NotificationToast />
 
 
 
@@ -162,6 +136,7 @@ import ContainerComponent from './views/ContainerComponent.vue'
 import BlogComponent from './views/BlogComponent.vue'
 import FooterComponent from './views/FooterComponent.vue'
 import OverlayComponents from './views/OverlayComponents.vue'
+import NotificationToast from './views/NotificationToast.vue'
 
 export default {
   components: {
@@ -177,6 +152,7 @@ export default {
     BlogComponent,
     FooterComponent,
     OverlayComponents,
+    NotificationToast,
   },
 
   created () {
@@ -187,7 +163,7 @@ export default {
     
 
     
-      isToastClosed: false,
+     
       mobileMenus: Array.from({ length: 3 }, () => ({ isActive: false })),
       isOverlayActive: false,
       // accordionItems: Array.from({ length: 3 }, () => ({ isActive: false })),
@@ -200,17 +176,10 @@ export default {
     };
   },
   methods: {
-    test(){
-      alert("hi");
-    },
-
-    closeToast() {
-      this.isToastClosed = true;
-    },
-    openMobileMenu(index) {
-      this.mobileMenus[index].isActive = true;
-      this.isOverlayActive = true;
-    },
+    // openMobileMenu(index) {
+    //   this.mobileMenus[index].isActive = true;
+    //   this.isOverlayActive = true;
+    // },
     closeMobileMenu(index) {
       this.mobileMenus[index].isActive = false;
       this.isOverlayActive = false;
