@@ -115,7 +115,7 @@
   -->
 
   <header>
-      <HaderComponenet /> <!-- Use the updated component name here -->
+      <HeaderComponent /> <!-- Use the updated component name here -->
     </header>
 
 
@@ -2635,11 +2635,11 @@
 // eslint-disable-next-line no-unused-vars
 import { IonIcon } from '@ionic/vue';
 import './assets/style/style.css'
-import HaderComponenet from '../views/HaderComponenet.vue'; // Update the path
+import HeaderComponent from './views/HeaderComponent.vue'; // Update the path
 
 export default {
   components: {
-    HaderComponenet, // Update the component name
+    HeaderComponent, // Update the component name
   },
 
   created () {
