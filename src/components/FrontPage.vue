@@ -150,7 +150,7 @@
         <!-- - SIDEBAR -->
         <div class="sidebar  has-scrollbar" data-mobile-menu>
      
-          <SidebarCategory />
+          <SideBarCategoryComponents />
 
           <div class="product-showcase">
 
@@ -2344,14 +2344,14 @@ import './assets/style/style.css'
 import HeaderComponent from './views/HeaderComponent.vue'; 
 import BannerComponent from './views/BannerComponent.vue'
 import BannerCategoryComponent from './views/BannerCategoryComponent.vue'
-import SidebarCategory from './views/SidebarCategory.vue';
+import SideBarCategoryComponents from './views/SideBarCategoryComponents.vue'
 
 export default {
   components: {
     HeaderComponent,
     BannerComponent,
     BannerCategoryComponent,
-    SidebarCategory,
+    SideBarCategoryComponents,
   },
 
   created () {
