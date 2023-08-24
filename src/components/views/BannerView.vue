@@ -12,6 +12,7 @@
       <div class="banner-content">
 
         <p class="banner-subtitle">Trending item</p>
+        
 
         <h2 class="banner-title">Women's latest fashion sale</h2>
 
