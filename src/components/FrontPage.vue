@@ -1,32 +1,5 @@
 <template>
-  <!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motori-Style Store</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo/logo_white.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style-prefix.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-</head>
 
 <body>
 
@@ -35,17 +8,17 @@
 
   <!--- ALERT TO SUBSSCRIBE   -->
 
-  <OverlayComponents />
+  <OverlayView />
 
   <!---    NOTIFICATION TOAST   -->
 
  <NotificationToast />
 
-      <HeaderComponent /> <!-- Use the updated component name here -->
+      <HeaderView /> 
     
   <main>
-    <BannerComponent />
-    <BannerCategoryComponent />
+    <BannerView />
+    <BannerCategoryView />
 
     <div class="product-container">
 
@@ -53,15 +26,15 @@
         <!-- - SIDEBAR -->
         <div class="sidebar  has-scrollbar" data-mobile-menu>
 
-          <SideBarCategoryComponents />
-          <SideBarProductShowCase />
+          <SideBarCategoryView />
+          <SideBarProductShowCaseView />
         </div>
 
         <div class="product-box">
 
-          <ProductMinimal />
-          <ProductFeatured />
-          <ProductMain />
+          <ProductMinimalView />
+          <ProductFeaturedView />
+          <ProductMainView />
 
         </div>
 
@@ -70,55 +43,52 @@
     </div>
 
     <div>
-      <ContainerComponent />
+      <ContainerView />
     </div>
 
-    <BlogComponent />
+    <BlogView />
    
 
   </main>
 
- <FooterComponent />
-
-  <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+ <FooterView />
 
 </body>
 
-</html>
+
 </template>
 
 <script>
 import './assets/style/style.css'
 
-import HeaderComponent from './views/HeaderComponent.vue'
-import BannerComponent from './views/BannerComponent.vue'
-import BannerCategoryComponent from './views/BannerCategoryComponent.vue'
-import SideBarCategoryComponents from './views/SideBarCategoryComponents.vue'
-import SideBarProductShowCase from './views/SideBarProductShowCase.vue'
-import ProductMinimal from './views/ProductMinimal.vue'
-import ProductFeatured from './views/ProductFeatured.vue'
-import ProductMain from "./views/ProductMain.vue"
-import ContainerComponent from './views/ContainerComponent.vue'
-import BlogComponent from './views/BlogComponent.vue'
-import FooterComponent from './views/FooterComponent.vue'
-import OverlayComponents from './views/OverlayComponents.vue'
-import NotificationToast from './views/NotificationToast.vue'
+import HeaderView from './views/HeaderView.vue'
+import BannerView from './views/BannerView.vue'
+import BannerCategoryView from './views/BannerCategoryView.vue'
+import SideBarCategoryView from './views/SideBarCategoryView.vue'
+import SideBarProductShowCaseView from './views/SideBarProductShowCaseView.vue'
+import ProductMinimalView from './views/ProductMinimalView.vue'
+import ProductFeaturedView from './views/ProductFeaturedView.vue'
+import ProductMainView from "./views/ProductMainView.vue"
+import ContainerView from './views/ContainerView.vue'
+import BlogView from './views/BlogView.vue'
+import FooterView from './views/FooterView.vue'
+import OverlayView from './views/OverlayView.vue'
+import NotificationToast from './views/NotificationToastView.vue'
 
 export default {
   components: {
-    HeaderComponent,
-    BannerComponent,
-    BannerCategoryComponent,
-    SideBarCategoryComponents,
-    SideBarProductShowCase,
-    ProductMinimal,
-    ProductFeatured,
-    ProductMain,
-    ContainerComponent,
-    BlogComponent,
-    FooterComponent,
-    OverlayComponents,
+    HeaderView,
+    BannerView,
+    BannerCategoryView,
+    SideBarCategoryView,
+    SideBarProductShowCaseView,
+    ProductMinimalView,
+    ProductFeaturedView,
+    ProductMainView,
+    ContainerView,
+    BlogView,
+    FooterView,
+    OverlayView,
     NotificationToast,
   },
 
