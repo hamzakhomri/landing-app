@@ -5,16 +5,11 @@
 
 
   <div :class="{ 'active': isOverlayActive }" @click="closeMobileMenus" class="overlay" data-overlay></div>
-
   <!--- ALERT TO SUBSSCRIBE   -->
-
   <OverlayView />
-
-  <!---    NOTIFICATION TOAST   -->
-
- <NotificationToast />
-
-      <HeaderView /> 
+  <!--- NOTIFICATION TOAST   -->
+  <NotificationToast />
+  <HeaderView /> 
     
   <main>
     <BannerView />
@@ -121,6 +116,9 @@ export default {
 
 };
 </script>
+<style scoped>
+
+</style>
 
     
 
