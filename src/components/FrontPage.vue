@@ -22,7 +22,6 @@
         <div class="sidebar  has-scrollbar" data-mobile-menu>
 
           <SideBarCategoryView />
-          <SideBarProductShowCaseView />
         </div>
 
         <div class="product-box">
@@ -60,7 +59,6 @@ import HeaderView from './views/HeaderView.vue'
 import BannerView from './views/BannerView.vue'
 import BannerCategoryView from './views/BannerCategoryView.vue'
 import SideBarCategoryView from './views/SideBarCategoryView.vue'
-import SideBarProductShowCaseView from './views/SideBarProductShowCaseView.vue'
 import ProductMinimalView from './views/ProductMinimalView.vue'
 import ProductFeaturedView from './views/ProductFeaturedView.vue'
 import ProductMainView from "./views/ProductMainView.vue"
@@ -76,7 +74,6 @@ export default {
     BannerView,
     BannerCategoryView,
     SideBarCategoryView,
-    SideBarProductShowCaseView,
     ProductMinimalView,
     ProductFeaturedView,
     ProductMainView,
