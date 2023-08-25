@@ -1,6 +1,6 @@
 <template>
   <div class="product-minimal">
-
+<!-- 
     <div class="product-showcase">
 
       <h2 class="title">New Arrivalss</h2>
@@ -624,7 +624,7 @@
 
       </div>
 
-    </div>
+    </div> -->
 
   </div>
 </template>
