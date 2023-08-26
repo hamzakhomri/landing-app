@@ -46,7 +46,7 @@ export default {
 
     data(){
         return {
-            isModalClosed: true,
+            isModalClosed: false,
         }
     },
     methods: {
@@ -58,5 +58,23 @@ export default {
 </script>
 
 <style>
-
+  /*** overlay */
+  
+  .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 15;
+  transition: 0.5s ease;
+  }
+  
+  .overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  }
 </style>
